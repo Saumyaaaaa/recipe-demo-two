@@ -15,7 +15,10 @@ const list = async() => {
           list.meals.map((lists)=>
           <li>
             
-          <div className='bg-yellow-500 text-center p-5 ml-5 mr-5 mt-5 rounded-lg hover:bg-yellow-600 cursor-pointer font-bold  min-height: 100vh'>{lists.strArea}</div>
+          <div 
+          className='bg-yellow-500 text-center p-5 ml-5 mr-5 mt-5 rounded-lg hover:bg-yellow-600 cursor-pointer font-bold  min-height: 100vh'>
+            {lists.strArea}
+            </div>
         </li>
           )
         }
