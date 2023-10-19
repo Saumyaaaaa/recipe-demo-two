@@ -3,13 +3,13 @@
 const page = async({
     params
 }) => {
-    async function fetchcount(){
+    async function fetcharea(){
         const response= await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${params.area}`)
         return response.json()
 
     }
-    const area=await fetchcount()
-    console.log(fetchcount)
+    const area=await fetcharea()
+   
 
     
 
@@ -22,6 +22,7 @@ const page = async({
       </li>
       )
       }
+     
 
     </div>
 
