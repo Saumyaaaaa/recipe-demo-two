@@ -9,13 +9,14 @@ const list = async() => {
     }
     const list=await fetchlist()
   return (
-    <div>
-      <ul>
+    <div >
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4  ">
         {
           list.meals.map((lists)=>
           <li>
-            <h2>{lists.strArea}</h2>
-          </li>
+            
+          <div className='bg-yellow-500 text-center p-5 ml-5 mr-5 mt-5 rounded-lg hover:bg-yellow-600 cursor-pointer font-bold  min-height: 100vh'>{lists.strArea}</div>
+        </li>
           )
         }
       </ul>
