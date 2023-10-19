@@ -17,7 +17,7 @@ const page = async({
     <div>
       {
       area.meals.map((items)=>
-      <li>
+      <li >
         {items.strMeal}
       </li>
       )
