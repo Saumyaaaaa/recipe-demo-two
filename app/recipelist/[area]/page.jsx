@@ -1,4 +1,4 @@
-
+import Image from "next/image"
 
 const page = async({
     params
@@ -14,12 +14,25 @@ const page = async({
     
 
   return (
-    <div>
+    <div className="bg-slate-400 ">
       {
       area.meals.map((items)=>
-      <li >
+      <li className="text-2xl pb-8 font-bold text-center ">
         {items.strMeal}
+        <div className="flex justify-evenly  pb-8"> 
+                
+               <Image
+                alt="recipe"
+                src={`${items.strMealThumb}`}
+                width={500}
+                height={500}
+                className="bg-slate-400 "
+               
+                
+                />
+               </div>
       </li>
+      
       )
       }
      
