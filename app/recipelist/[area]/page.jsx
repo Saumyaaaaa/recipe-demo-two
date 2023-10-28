@@ -17,7 +17,8 @@ const page = async({
     <div className="bg-slate-400 ">
       {
       area.meals.map((items)=>
-      <li className="text-2xl pb-8 font-bold text-center ">
+     
+       <li className="text-2xl pb-8 font-bold text-center ">
         {items.strMeal}
         <div className="flex justify-evenly  pb-8"> 
                 
@@ -32,6 +33,7 @@ const page = async({
                 />
                </div>
       </li>
+   
       
       )
       }
