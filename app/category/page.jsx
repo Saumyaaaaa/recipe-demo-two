@@ -8,24 +8,32 @@ const category = async() => {
     const data= await fetchCategories()
     console.log(data)
   return (
-    <div>
-        <ul>
+    <div className="bg-slate-400">
+        <ul >
             {
                data.categories.map((item)=>
                <li>
-               <p>
+               <p className="  font-bold text-3xl text-center p-5">
                {item.strCategory}
                
                </p>
-               <p>
+               
+               <div className="items-end text-start">
+               <p className="text-1xl indent-8">
                {item.strCategoryDescription}
                </p>
-                <Image
+               </div>
+               <div className="flex justify-evenly "> 
+                
+               <Image
                 alt="recipe"
                 src={`${item.strCategoryThumb}`}
                 width={500}
                 height={500}
+                className="bg-slate-400 "
+                
                 />
+               </div>
                </li>
                )
             }
@@ -35,5 +43,4 @@ const category = async() => {
     </div>
   )
 }
-
 export default category
